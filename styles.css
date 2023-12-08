@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* This ensures the div takes up the full viewport height */
+    height: 90vh; /* This ensures the div takes up the full viewport height */
   }
 
 label, input, button, p {
@@ -11,5 +11,5 @@ label, input, button, p {
   }
 
   p {
-    width: 100vh;
+    width: 75vh;
   }
