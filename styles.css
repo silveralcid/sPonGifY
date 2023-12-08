@@ -9,3 +9,7 @@
 label, input, button, p {
     margin: 5px; /* Adjust the margin as needed */
   }
+
+  p {
+    width: 100vh;
+  }
