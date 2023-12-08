@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sPonGifY</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  
+    <div class="sponge-converter">
+        <img src="sponge.png" alt="sponge">
+        <label for="inputText">Enter Text:</label>
+        <input type="text" id="inputText">
+        <button onclick="randomlyCapitalizeText()">sPonGifY</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+    function randomlyCapitalizeText() {
+        const inputElement = document.getElementById('inputText');
+        const outputElement = document.getElementById('output');
+        
+        const inputText = inputElement.value;
+        const randomizedText = randomlyCapitalize(inputText);
+        
+        outputElement.textContent = randomizedText;
+    }
+
+    function randomlyCapitalize(word) {
+        if (typeof word !== 'string' || word.length === 0) {
+        // Return an empty string for invalid input
+        return '';
+        }
+
+        // Create an array to store the result
+        const result = [];
+
+        // Loop through each character in the word
+        for (let i = 0; i < word.length; i++) {
+        const character = word[i];
+
+        // Generate a random number (0 or 1) to determine capitalization
+        const shouldCapitalize = Math.random() < 0.5;
+
+        // Capitalize the letter if shouldCapitalize is true, otherwise keep it lowercase
+        result.push(shouldCapitalize ? character.toUpperCase() : character.toLowerCase());
+        }
+
+        // Join the characters in the result array to form the final string
+        return result.join('');
+    }
+    </script>
+</body>
+</html>
